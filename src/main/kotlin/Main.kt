@@ -42,30 +42,11 @@ fun App() {
                 Button(onClick = { webViewState.browser.goForward() }) {
                     Text("Forward")
                 }
-
-                Button(onClick = {
-                    webViewState.browser.devTools.uiComponent.isVisible = true
-                }) {
-                    Text("QWQ")
-                }
             }
 
             WebView(webViewState, Modifier.fillMaxSize())
         }
     }
-}
-
-@Composable
-fun Weacom(name: String) {
-    DisposableEffect(Unit) {
-        println("create")
-
-        onDispose {
-            println("dispose")
-        }
-    }
-
-    Text(name)
 }
 
 fun main() = application {
